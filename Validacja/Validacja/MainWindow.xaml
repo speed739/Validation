@@ -1,0 +1,22 @@
+﻿<Window x:Class="Validacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Validacja"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="18,0,-18,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="94*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="a"  HorizontalAlignment="Left" Height="23" Margin="248,107,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding MW_Model.Login}" Grid.Column="1"/>
+        <TextBox x:Name="b"  HorizontalAlignment="Left" Height="23" Margin="247.644,156,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding MW_Model.Password}" Grid.Column="1"/>
+        <Button Content="Potwierdz" Command="{Binding MW_Command}" CommandParameter="{Binding MW_Model}" Margin="265,206,412,184" Click="Button_Click" Grid.Column="1" />
+        <TextBlock x:Name="Errors" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Margin="162,318,0,0" Width="333" Height="62"/>
+        <Label Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="248,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" Grid.Column="1" HorizontalAlignment="Left" Margin="248,128,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
